@@ -1,0 +1,170 @@
+[gd_scene load_steps=12 format=3 uid="uid://cl1xa6jywpa45"]
+
+[ext_resource type="Texture2D" uid="uid://cjieog0bpia07" path="res://addons/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="1_3l28u"]
+[ext_resource type="Script" path="res://UI/game_ui.gd" id="1_e0wp7"]
+[ext_resource type="Texture2D" uid="uid://b5ypjlw7wsn1n" path="res://addons/Tiny Swords (Update 010)/Resources/Resources/M_Idle_(NoShadow).png" id="3_0fiy7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uriet"]
+texture = ExtResource("1_3l28u")
+texture_margin_left = 56.0
+texture_margin_top = 16.0
+texture_margin_right = 56.0
+texture_margin_bottom = 32.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 192, 48)
+
+[sub_resource type="FontFile" id="FontFile_b43av"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1hva4"]
+line_spacing = 4.0
+font = SubResource("FontFile_b43av")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0.0475576, 0.0475577, 0.0475576, 1)
+shadow_color = Color(0, 0, 0, 0.964706)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drmv1"]
+atlas = ExtResource("3_0fiy7")
+region = Rect2(-4, -4, 128, 136)
+
+[sub_resource type="FontFile" id="FontFile_0ylwn"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/1/0/ascent = 0.0
+cache/0/1/0/descent = 0.0
+cache/0/1/0/underline_position = 0.0
+cache/0/1/0/underline_thickness = 0.0
+cache/0/1/0/scale = 1.0
+cache/0/1/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/2/0/ascent = 0.0
+cache/0/2/0/descent = 0.0
+cache/0/2/0/underline_position = 0.0
+cache/0/2/0/underline_thickness = 0.0
+cache/0/2/0/scale = 1.0
+cache/0/2/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/3/0/ascent = 0.0
+cache/0/3/0/descent = 0.0
+cache/0/3/0/underline_position = 0.0
+cache/0/3/0/underline_thickness = 0.0
+cache/0/3/0/scale = 1.0
+cache/0/3/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/3/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_nj7o0"]
+default_font = SubResource("FontFile_0ylwn")
+default_font_size = 0
+
+[sub_resource type="SystemFont" id="SystemFont_147fb"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_soy8v"]
+font = SubResource("SystemFont_147fb")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0.0534209, 0.0534209, 0.0534209, 1)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_e0wp7")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -207.0
+offset_top = 19.0
+offset_right = -26.0
+offset_bottom = 98.0
+grow_horizontal = 0
+scale = Vector2(1.02037, 0.941732)
+theme_override_styles/panel = SubResource("StyleBoxTexture_uriet")
+
+[node name="MeatLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -159.0
+offset_top = 20.0
+offset_right = -91.0
+offset_bottom = 88.0
+grow_horizontal = 0
+scale = Vector2(0.573303, 0.578297)
+text = " 99"
+label_settings = SubResource("LabelSettings_1hva4")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 68.6026
+offset_top = -41.4131
+offset_right = 196.603
+offset_bottom = 94.5869
+texture = SubResource("AtlasTexture_drmv1")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -667.0
+offset_top = 18.0
+offset_right = -517.0
+offset_bottom = 97.0
+grow_horizontal = 0
+scale = Vector2(1.02037, 0.941732)
+theme_override_styles/panel = SubResource("StyleBoxTexture_uriet")
+
+[node name="TimerLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.5
+offset_top = -17.0
+offset_right = 31.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_nj7o0")
+text = "08:50"
+label_settings = SubResource("LabelSettings_soy8v")
